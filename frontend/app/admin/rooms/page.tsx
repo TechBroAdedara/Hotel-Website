@@ -34,7 +34,7 @@ export default async function AdminRoomsPage() {
         </Link>
       </div>
 
-      <div className="overflow-hidden rounded-xl border border-line">
+      <div className="overflow-x-auto rounded-xl border border-line">
         <table className="w-full text-left text-sm">
           <thead className="bg-surface">
             <tr>
