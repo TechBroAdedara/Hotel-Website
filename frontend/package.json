@@ -5,7 +5,7 @@
   "scripts": {
     "bootstrap": "node --env-file=.env.local scripts/bootstrap.mjs",
     "predev": "node --env-file=.env.local scripts/bootstrap.mjs",
-    "prebuild": "node --env-file=.env.local scripts/bootstrap.mjs",
+    "prebuild": "node scripts/bootstrap.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
