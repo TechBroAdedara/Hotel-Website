@@ -8,6 +8,5 @@ data
 .env*.local
 *.md
 .DS_Store
-bun.lock
 drizzle.config.ts
 AGENTS.md
