@@ -200,7 +200,7 @@ export default function BookingForm() {
                       </p>
                     </div>
                     <p className="font-medium text-heading">
-                      ${room.basePrice}
+                      ₦{room.basePrice.toLocaleString()}
                       <span className="text-sm font-normal text-subtle">
                         /night
                       </span>
@@ -312,7 +312,7 @@ export default function BookingForm() {
                   {nights}
                 </p>
                 <p className="text-base font-bold text-heading">
-                  Total: ${totalPrice}
+                  Total: ₦{totalPrice.toLocaleString()}
                 </p>
               </div>
               <button

@@ -101,7 +101,7 @@ export default async function RoomsPage({
                   {room.description}
                 </p>
                 <p className="text-sm font-medium text-heading">
-                  From ${room.basePrice}
+                  From ₦{room.basePrice.toLocaleString()}
                   <span className="font-normal text-subtle"> / night</span>
                 </p>
               </div>

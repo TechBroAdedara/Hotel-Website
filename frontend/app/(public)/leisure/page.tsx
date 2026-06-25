@@ -2,6 +2,8 @@ import { db } from "@/lib/db";
 import { leisureSites } from "@/lib/schema";
 import { eq, asc } from "drizzle-orm";
 
+export const dynamic = "force-dynamic";
+
 export default async function LeisurePage() {
   const sites = await db
     .select()

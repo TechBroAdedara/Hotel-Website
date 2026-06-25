@@ -66,25 +66,25 @@ export default function HomePage() {
                 tier: "standard",
                 name: "Standard",
                 desc: "Comfortable and affordable",
-                price: "From $120/night",
+                price: "From ₦120,000/night",
               },
               {
                 tier: "deluxe",
                 name: "Deluxe",
                 desc: "Premium comfort and space",
-                price: "From $220/night",
+                price: "From ₦330,000/night",
               },
               {
                 tier: "suite",
                 name: "Suite",
                 desc: "Separate living areas",
-                price: "From $380/night",
+                price: "From ₦570,000/night",
               },
               {
                 tier: "penthouse",
                 name: "Penthouse",
                 desc: "Ultimate luxury living",
-                price: "From $950/night",
+                price: "From ₦1,425,000/night",
               },
             ].map((tier) => (
               <Link

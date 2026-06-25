@@ -4,17 +4,24 @@ import fs from "fs";
 
 console.log(process.env.ADMIN_PASSWORD ? "ADMIN_PASSWORD is set" : "ADMIN_PASSWORD is not set");
 
-const dbPath =
-  process.env.DATABASE_PATH || path.join(process.cwd(), "data", "hotel.db");
+const dbUrl =
+  process.env.DATABASE_URL ||
+  `file:${process.env.DATABASE_PATH || path.join(process.cwd(), "data", "hotel.db")}`;
 
-fs.mkdirSync(path.dirname(dbPath), { recursive: true });
+if (dbUrl.startsWith("file:")) {
+  const filePath = dbUrl.slice("file:".length);
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+}
 
 const client = createClient({
-  url: `file:${dbPath}`,
+  url: dbUrl,
+  authToken: process.env.DATABASE_AUTH_TOKEN,
 });
 
-await client.execute("PRAGMA journal_mode=WAL");
-await client.execute("PRAGMA busy_timeout=5000");
+if (dbUrl.startsWith("file:")) {
+  await client.execute("PRAGMA journal_mode=WAL");
+  await client.execute("PRAGMA busy_timeout=5000");
+}
 
 await client.executeMultiple(
   `CREATE TABLE IF NOT EXISTS room_tiers (
@@ -106,7 +113,7 @@ if (rows.rows[0].count === 0) {
         ('hotel_email','info@grandvistahotel.com'),
         ('check_in_time','15:00'),
         ('check_out_time','11:00'),
-        ('currency','USD');`,
+        ('currency','NGN');`,
     );
 
     const adminPassword = process.env.ADMIN_PASSWORD;

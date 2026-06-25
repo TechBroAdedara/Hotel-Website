@@ -112,7 +112,7 @@ export default async function AdminRoomEditPage({
 
             <div>
               <label className="mb-1 block text-sm font-medium text-heading">
-                Base Price ($/night)
+                Base Price (₦/night)
               </label>
               <input
                 name="basePrice"

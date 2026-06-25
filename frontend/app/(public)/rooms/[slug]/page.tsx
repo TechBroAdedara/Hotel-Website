@@ -80,7 +80,7 @@ export default async function RoomDetailPage({
 
             <div className="mb-8">
               <p className="mb-1 text-3xl font-bold text-heading">
-                ${room.basePrice}
+                ₦{room.basePrice.toLocaleString()}
                 <span className="text-base font-normal text-subtle">
                   {" "}
                   / night

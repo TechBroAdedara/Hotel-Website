@@ -224,7 +224,7 @@ async function seed() {
     { key: "hotel_email", value: "info@grandvistahotel.com" },
     { key: "check_in_time", value: "15:00" },
     { key: "check_out_time", value: "11:00" },
-    { key: "currency", value: "USD" },
+    { key: "currency", value: "NGN" },
   ];
 
   for (const setting of settings) {

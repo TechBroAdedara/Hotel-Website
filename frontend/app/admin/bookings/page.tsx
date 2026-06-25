@@ -70,7 +70,7 @@ export default async function AdminBookingsPage() {
                   {booking.checkOut}
                 </td>
                 <td className="px-4 py-3 font-medium text-heading">
-                  ${booking.totalPrice}
+                  ₦{booking.totalPrice.toLocaleString()}
                 </td>
                 <td className="px-4 py-3">
                   <span

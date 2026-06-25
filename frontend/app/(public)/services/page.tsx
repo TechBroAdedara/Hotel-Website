@@ -2,6 +2,8 @@ import { db } from "@/lib/db";
 import { services } from "@/lib/schema";
 import { eq, asc } from "drizzle-orm";
 
+export const dynamic = "force-dynamic";
+
 export default async function ServicesPage() {
   const allServices = await db
     .select()

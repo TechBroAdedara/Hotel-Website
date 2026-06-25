@@ -58,7 +58,7 @@ export default async function AdminRoomsPage() {
                 </td>
                 <td className="px-4 py-3 text-muted">{room.tierName}</td>
                 <td className="px-4 py-3 text-heading">
-                  ${room.basePrice}
+                  ₦{room.basePrice.toLocaleString()}
                 </td>
                 <td className="px-4 py-3 text-muted">{room.capacity}</td>
                 <td className="px-4 py-3">

@@ -100,7 +100,7 @@ export default async function BookingConfirmationPage({
             <div className="flex justify-between border-t border-line pt-3">
               <span className="font-medium text-heading">Total</span>
               <span className="font-bold text-heading">
-                ${booking.totalPrice}
+                ₦{booking.totalPrice.toLocaleString()}
               </span>
             </div>
           </div>

@@ -1,10 +1,13 @@
 import { defineConfig } from "drizzle-kit";
 
+const isTurso = process.env.DATABASE_URL?.startsWith("libsql://");
+
 export default defineConfig({
   schema: "./lib/schema.ts",
   out: "./drizzle",
-  dialect: "sqlite",
+  dialect: isTurso ? "turso" : "sqlite",
   dbCredentials: {
-    url: "file:./data/hotel.db",
+    url: process.env.DATABASE_URL || "file:./data/hotel.db",
+    authToken: isTurso ? process.env.DATABASE_AUTH_TOKEN : undefined,
   },
 });
