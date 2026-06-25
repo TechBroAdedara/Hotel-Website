@@ -103,7 +103,8 @@ export default function NavBar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className={`text-xl font-bold tracking-tight transition-colors ${
+          style={{ fontFamily: "var(--font-playfair-display)" }}
+          className={`text-2xl tracking-wide transition-colors ${
             opaque ? "text-heading" : "text-white"
           }`}
         >

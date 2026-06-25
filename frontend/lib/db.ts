@@ -71,27 +71,24 @@ if (process.env.NEXT_PHASE !== "phase-production-build") {
     try {
       await client.executeMultiple(
         `INSERT OR IGNORE INTO room_tiers VALUES
-          ('standard','Standard Room','Comfortable and affordable rooms for budget-conscious travelers.',1),
-          ('deluxe','Deluxe Room','Spacious rooms with premium amenities and superior comfort.',2),
-          ('suite','Suite','Luxurious suites with separate living areas and exclusive services.',3),
-          ('penthouse','Penthouse','The pinnacle of luxury living with panoramic views and personalized butler service.',4);
+          ('deluxe','Deluxe','Premium comfort and space. Perfect for business and leisure travelers.',1),
+          ('supreme','Supreme','Elevated luxury with sophisticated interiors and premium amenities.',2),
+          ('executive','Executive','Refined elegance with exclusive executive privileges.',3),
+          ('presidential','Presidential','The pinnacle of luxury living with panoramic views and personalized butler service.',4);
         INSERT OR IGNORE INTO rooms VALUES
-          ('std-101','standard','Cozy Single','A comfortable single room with a city view, perfect for solo travelers.',120,1,22,
-           '["Free Wi-Fi","Air Conditioning","Smart TV","Work Desk","En-suite Bathroom"]',
-           '["/images/rooms/standard-1.jpg","/images/rooms/standard-2.jpg"]',1,datetime('now'),datetime('now')),
-          ('std-102','standard','Standard Twin','Ideal for friends or colleagues traveling together.',150,2,28,
-           '["Free Wi-Fi","Air Conditioning","Smart TV","Mini Fridge","En-suite Bathroom"]',
-           '["/images/rooms/standard-twin-1.jpg"]',1,datetime('now'),datetime('now')),
-          ('dlx-201','deluxe','Deluxe King','A spacious room featuring a king-sized bed with premium bedding.',220,2,35,
+          ('dlx-201','deluxe','Deluxe King','A spacious room featuring a king-sized bed with premium bedding.',30000,2,35,
            '["King Bed","Free Wi-Fi","Air Conditioning","Smart TV","Mini Bar","Coffee Machine","Rain Shower","Safe"]',
            '["/images/rooms/deluxe-1.jpg","/images/rooms/deluxe-2.jpg","/images/rooms/deluxe-3.jpg"]',1,datetime('now'),datetime('now')),
-          ('dlx-202','deluxe','Deluxe Double','Perfect for families or groups. Two double beds.',260,4,40,
+          ('dlx-202','deluxe','Deluxe Double','Perfect for families or groups. Two double beds.',30000,4,40,
            '["Two Double Beds","Free Wi-Fi","Air Conditioning","Smart TV","Mini Bar","Bathtub","Workspace"]',
            '["/images/rooms/deluxe-double-1.jpg"]',1,datetime('now'),datetime('now')),
-          ('ste-301','suite','Junior Suite','A stylish suite with a separate bedroom and living area.',380,2,55,
-           '["Separate Living Area","King Bed","Free Wi-Fi","Air Conditioning","Smart TV","Mini Bar","Soaking Tub","Bathrobes & Slippers","Turndown Service"]',
+          ('sup-301','supreme','Supreme Room','A stylish room with sophisticated interiors and premium amenities.',35000,2,45,
+           '["King Bed","Separate Living Area","Free Wi-Fi","Air Conditioning","Smart TV","Mini Bar","Soaking Tub","Bathrobes & Slippers","Turndown Service"]',
            '["/images/rooms/suite-1.jpg","/images/rooms/suite-2.jpg"]',1,datetime('now'),datetime('now')),
-          ('pen-401','penthouse','Presidential Penthouse','The ultimate in luxury living. Expansive open-plan living with 360-degree views.',950,4,120,
+          ('exc-401','executive','Executive Suite','Refined elegance with a separate living area and exclusive executive privileges.',40000,2,55,
+           '["Separate Living Area","King Bed","Free Wi-Fi","Air Conditioning","Smart TV","Mini Bar","Coffee Machine","Rain Shower","Workspace"]',
+           '["/images/rooms/deluxe-1.jpg","/images/rooms/deluxe-2.jpg"]',1,datetime('now'),datetime('now')),
+          ('pen-501','presidential','Presidential Suite','The ultimate in luxury living. Expansive open-plan living with panoramic views.',70000,4,120,
            '["Panoramic Views","Private Terrace","Outdoor Jacuzzi","Butler Service","Separate Dining Area","Full Kitchen","King Bed","En-suite with Steam Shower","Walk-in Closet","Welcome Champagne"]',
            '["/images/rooms/penthouse-1.jpg","/images/rooms/penthouse-2.jpg","/images/rooms/penthouse-3.jpg"]',1,datetime('now'),datetime('now'));
         INSERT OR IGNORE INTO services VALUES

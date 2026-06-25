@@ -63,28 +63,28 @@ export default function HomePage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                tier: "standard",
-                name: "Standard",
-                desc: "Comfortable and affordable",
-                price: "From ₦120,000/night",
-              },
-              {
                 tier: "deluxe",
                 name: "Deluxe",
                 desc: "Premium comfort and space",
-                price: "From ₦330,000/night",
+                price: "From ₦30,000/night",
               },
               {
-                tier: "suite",
-                name: "Suite",
-                desc: "Separate living areas",
-                price: "From ₦570,000/night",
+                tier: "supreme",
+                name: "Supreme",
+                desc: "Elevated luxury and style",
+                price: "From ₦35,000/night",
               },
               {
-                tier: "penthouse",
-                name: "Penthouse",
+                tier: "executive",
+                name: "Executive",
+                desc: "Refined executive comfort",
+                price: "From ₦40,000/night",
+              },
+              {
+                tier: "presidential",
+                name: "Presidential",
                 desc: "Ultimate luxury living",
-                price: "From ₦1,425,000/night",
+                price: "From ₦70,000/night",
               },
             ].map((tier) => (
               <Link
