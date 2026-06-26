@@ -109,7 +109,7 @@ export default function NavBar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors ${
+      className={`sticky top-0 z-50 transition-colors pt-[env(safe-area-inset-top)] ${
         opaque
           ? "border-b border-line bg-white/95 backdrop-blur-sm shadow-sm"
           : "bg-transparent"

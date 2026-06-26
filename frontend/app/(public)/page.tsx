@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative flex min-h-screen items-center justify-center -mt-28 pt-20">
+      <section className="relative flex min-h-screen items-center justify-center -mt-[calc(112px+env(safe-area-inset-top))] pt-[calc(80px+env(safe-area-inset-top))]">
         <Image
           src="/hero-bg.avif"
           alt=""

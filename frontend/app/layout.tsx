@@ -18,6 +18,12 @@ const displayFont = Playfair_Display({
   variable: "--font-playfair-display",
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
   title: {
     template: "%s | GB Hotel and Suite",
